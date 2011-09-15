@@ -212,7 +212,7 @@
 					break;
 			}
 			
-			if(paletteView) initPalletView();
+			if(paletteView) initPaletteView();
 			if(hypeView) hypeView.reset(currentColorList);
 		}
 
@@ -254,11 +254,11 @@
 		}
 		
 		private function addViews():void{
-			initPalletView();
+			initPaletteView();
 			addHypeView();
 		}
 		
-		private function initPalletView():void{
+		private function initPaletteView():void{
 			
 			if(paletteView){
 				paletteView.destroy();
