@@ -19,8 +19,8 @@ package com.thesven.image.jpeg.colortable {
 			var x:int = 0;
 			var y:int = 0;
 		
-			var w:int = Math.round( source.width / columns );
-			var h:int = Math.round( source.height / columns );
+			const w:int = Math.round( source.width / columns );
+			const h:int = Math.round( source.height / columns );
 		
 			for (var i:int = 0; i <= colours; i++)
 			{
@@ -47,12 +47,12 @@ package com.thesven.image.jpeg.colortable {
 		}
 		
 		public static function averageColour( source:BitmapData ):uint{
-			var red:Number = 0;
-			var green:Number = 0;
-			var blue:Number = 0;
+			var red:uint = 0;
+			var green:uint = 0;
+			var blue:uint = 0;
 		
-			var count:Number = 0;
-			var pixel:Number;
+			const count:uint = source.width * source.height;
+			var pixel:uint;
 		
 			for (var x:int = 0; x < source.width; x++)
 			{
@@ -63,8 +63,6 @@ package com.thesven.image.jpeg.colortable {
 					red += pixel >> 16 & 0xFF;
 					green += pixel >> 8 & 0xFF;
 					blue += pixel & 0xFF;
-		
-					count++;
 				}
 			}
 		
