@@ -95,7 +95,7 @@ package com.colorpicker.sections.hypeview {
 		}
 		
 		private function onPoolRelease(clip:MovieClip):void{
-			removeChild(clip);
+			clipContainer.removeChild(clip);
 		}
 		
 		private function fadeOut(r:SimpleRhythm):void{
